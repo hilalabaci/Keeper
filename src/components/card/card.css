@@ -20,16 +20,12 @@
 .editElement:hover {
   opacity: 1;
 }
-.card-text-container {
-}
 .card-text {
   font-size: 20px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: normal;
-
   border: none;
-
   width: 300px;
   flex-wrap: wrap;
   font-family: Hind;
@@ -38,7 +34,17 @@
   resize: none;
   height: 240px;
   backdrop-filter: sepia(90%);
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+  
 }
+.card-text.edit::-webkit-scrollbar {
+  display: none;
+}
+
+
+
 .card-text.label {
   display: -webkit-box;
   -webkit-line-clamp: 9;

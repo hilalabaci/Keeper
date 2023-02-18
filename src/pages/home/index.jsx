@@ -15,7 +15,7 @@ const allDetails = (details) => (
 const Home = () => (
   <div className="home-container">
     <div className="card-add-side">
-      <p className="title-home">Keeper</p>
+      <p className="home-brand">Keeper</p>
       <img
         className="plus-element"
         alt="plus element"
