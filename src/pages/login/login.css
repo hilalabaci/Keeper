@@ -1,0 +1,84 @@
+body {
+  font-family: "Hind";
+  background: #29363f;
+  width: 100%;
+  height: 100%;
+}
+
+.login-container {
+  margin: 10% auto;
+  padding: 80px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.formside {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  width:max-content;
+}
+.logoside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.emoji {
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  text-shadow: 2px 2px 4px #000000;
+  letter-spacing: 5px;
+  opacity: 0.9;
+}
+.hr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid white;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  opacity: 0.2;
+  box-shadow: inset;
+  box-shadow: 10px 1px 1px 1px grey;
+}
+.linkside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aTag {
+  text-decoration: none;
+  margin-left: 2px;
+  color: white;
+  opacity: 0.5;
+  padding-left: 5px;
+}
+.aTag:hover {
+  text-decoration: none;
+  margin-left: 2px;
+  color: #75d7a5;
+  opacity: 0.5;
+  padding-left: 5px;
+}
+.form {
+  flex: 1;
+ display: flex;
+ align-items: center;
+}
+.span {
+  opacity: 0.2;
+}

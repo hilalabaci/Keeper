@@ -1,0 +1,77 @@
+body {
+  background-color: #f1f2f2;
+}
+.card-add-side {
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 50px;
+}
+.home-container {
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.home-title {
+  font-size: 100px;
+  color: black;
+  margin: 0;
+  opacity: 0.9;
+  margin-top: 60px;
+}
+.notes-side {
+  flex: 1;
+  padding: 40px 100px;
+}
+.title-home {
+  font-size: 30px;
+  font-family: Hind;
+  margin: 0;
+}
+.plus-element {
+  border-radius: 100px;
+  opacity: 0.8;
+  margin-top: 60px;
+  width: 70px;
+}
+
+.search-input {
+  width: 200px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 25px;
+  background-color: white;
+  background-image: url("/public/assets/emoji/searchicon.png");
+  background-position: 10px 15px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  font-family: Hind;
+  transition: width 0.4s ease-in-out;
+  background-repeat: no-repeat;
+}
+.search-input::placeholder {
+  opacity: 0.5;
+}
+.search-input:hover {
+  cursor: pointer;
+}
+.search-input:focus-visible {
+  width: 100%;
+  border: 2px solid #ecebeb;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 2px 0px;
+}
