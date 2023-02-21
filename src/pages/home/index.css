@@ -1,6 +1,10 @@
 body {
   background-color: #f1f2f2;
 }
+.button-plus{
+  border: none;
+  background: white;
+}
 .card-add-side {
   border-right: 2px solid rgba(0, 0, 0, 0.1);
   padding: 40px 50px;
@@ -51,6 +55,9 @@ body {
   opacity: 0.8;
   margin-top: 112px;
   width: 70px;
+}
+.plus-element:hover {
+  opacity:1;
 }
 
 .search-input {

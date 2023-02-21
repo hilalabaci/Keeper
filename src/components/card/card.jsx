@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./card.css";
 
 const Card = (props) => {
   const [editText, setEditText] = useState(props.text);
   const [isEdit, setIsEdit] = useState(false);
+
+  //sent editText and id to index.jsx every time the editText changes
+  useEffect(() => {
+    const { onEditText } = props;
+
+    if (onEditText === undefined || props.text === editText) return;
+    onEditText(props.id, editText);
+  }, [editText]);
 
   return (
     <div className="card-container" style={{ backgroundColor: props.color }}>
@@ -20,7 +28,10 @@ const Card = (props) => {
             value={editText || ""}
           />
         ) : (
-          <p className="card-text label" style={{ backgroundColor: props.color }}>
+          <p
+            className="card-text label"
+            style={{ backgroundColor: props.color }}
+          >
             {editText}
           </p>
         )}
