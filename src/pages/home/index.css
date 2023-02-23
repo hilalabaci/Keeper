@@ -17,7 +17,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 60px;
-  margin-top: 50px;
+  margin-top:100px;
 }
 .home-container {
   border-radius: 30px;
@@ -38,7 +38,7 @@ body {
   margin-top: 10px;
 }
 .home-title {
-  font-size: 100px;
+  font-size: 70px;
   color: black;
   margin: 0;
   opacity: 0.9;
@@ -60,32 +60,4 @@ body {
   opacity:1;
 }
 
-.search-input {
-  width: 200px;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  font-size: 25px;
-  background-color: white;
-  background-image: url("/public/assets/emoji/searchicon.png");
-  background-position: 10px 15px;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  font-family: Hind;
-  transition: width 0.4s ease-in-out;
-  background-repeat: no-repeat;
-}
-.search-input::placeholder {
-  opacity: 0.5;
-}
-.search-input:hover {
-  cursor: pointer;
-}
-.search-input:focus-visible {
-  width: 100%;
-  border: 2px solid #ecebeb;
-  border-radius: 8px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 2px 0px;
-}
+

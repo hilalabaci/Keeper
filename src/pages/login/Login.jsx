@@ -6,7 +6,7 @@ const Login = () => (
   <div className="login-container">
     <div className="logoside">
       <img className="emoji" alt="emoji" src="/assets/emoji/logo.png" />
-      <h1 className="title">Keeper</h1>
+      <h1 className="title">Notes</h1>
     </div>
     <hr className="hr" />
     <div className="formside">

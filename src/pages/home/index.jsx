@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Card from "../../components/card/card";
 import "./index.css";
 import { v4 as uuid } from "uuid";
 import colors from "../../components/colors/colors";
+import Search from "../../components/search/Search";
 
 const Home = () => {
   const [notes, setNotes] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
   //lood notes from localstorage(JSON.stringift's converting databaseNotes from objects to string)
   useEffect(() => {
@@ -33,22 +35,44 @@ const Home = () => {
     });
     setNotes(newNotes);
   };
+  const onDelete = (id) => {
+    const newNotes = [...notes];
+    const index = newNotes.findIndex((note) => note.id === id);
+    if (index === -1) return;
+    newNotes.splice(index, 1);
+    setNotes(newNotes);
+  };
 
   //get updated text from card
   const onChange = (id, editText) => {
     const newNotes = [...notes];
     const note = newNotes.find((note) => note.id === id);
     if (note === undefined) return;
+
     note.text = editText;
     note.date = new Date().toLocaleString();
 
     setNotes(newNotes);
   };
 
+  const onSearch = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const filteredNotes = useMemo(() => {
+    if (searchInput.length > 0) {
+      return notes.filter((note) => {
+        return note.text.match(searchInput);
+      });
+    } else {
+      return notes;
+    }
+  }, [searchInput, notes]);
+
   return (
     <div className="home-container">
       <div className="card-add-side">
-        <p className="home-brand">Keeper</p>
+        <p className="home-brand">Notes</p>
         <button onClick={createNote} className="button-plus">
           <img
             className="plus-element"
@@ -58,24 +82,19 @@ const Home = () => {
         </button>
       </div>
       <div className="notes-side">
-        <div>
-          <input
-            className="search-input"
-            type="search"
-            placeholder="Search.."
-          />
-        </div>
-        <h1 className="home-title">Notes</h1>
+        <Search onSearch={onSearch} />
+        {/*  <h1 className="home-title">Notes</h1> */}
         <div className="card-wrapper">
-          {notes.map((details) => {
+          {filteredNotes.map((note) => {
             return (
               <Card
-                key={details.id}
-                id={details.id}
+                key={note.id}
+                id={note.id}
                 onEditText={onChange}
-                color={details.color}
-                text={details.text}
-                date={details.date}
+                onDelete={onDelete}
+                color={note.color}
+                text={note.text}
+                date={note.date}
               />
             );
           })}
