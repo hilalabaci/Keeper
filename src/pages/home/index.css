@@ -1,7 +1,12 @@
 body {
   background-color: #f1f2f2;
+  margin: 0;
 }
-.button-plus{
+#root,
+#root > div {
+  min-height: 100vh;
+}
+.button-plus {
   border: none;
   background: white;
 }
@@ -17,7 +22,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 60px;
-  margin-top:100px;
+  margin-top: 100px;
 }
 .home-container {
   border-radius: 30px;
@@ -29,7 +34,7 @@ body {
 }
 .home-brand {
   font-size: 25px;
-  font-weight:700;
+  font-weight: 700;
   font-family: Hind;
   margin: 0;
   color: black;
@@ -57,7 +62,60 @@ body {
   width: 70px;
 }
 .plus-element:hover {
-  opacity:1;
+  opacity: 1;
 }
+@media only screen and (max-width: 576px) {
+  .button-plus {
+    border: none;
+  }
+  .card-add-side {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px;
+    position: sticky;
+    bottom: 0px;
+    background-color: white;
+    z-index: 1;
+  }
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .home-container {
+    border-radius: 0px;
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0;
+    min-height: 100vh;
+  }
+  .home-brand {
+    display: none;
+  }
+  .home-title {
+    display: none;
+  }
+  .notes-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 
-
+  .plus-element {
+    border-radius: 100px;
+    opacity: 0.8;
+    width: 55px;
+    margin: 0;
+  }
+  .plus-element:hover {
+    opacity: 1;
+  }
+}

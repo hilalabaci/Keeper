@@ -38,39 +38,39 @@ const Card = (props) => {
         </button>
       </div>
       <div className="card-text-container">
-        {isEdit ? (
-          <textarea
-            onChange={(e) => setEditText(e.target.value)}
-            className="card-text edit"
-            ref={textAreaRef}
-            onFocus={(e) =>
-              e.currentTarget.setSelectionRange(
-                e.currentTarget.value.length,
-                e.currentTarget.value.length
-              )
-            }
-            onBlur={() => {
-              setIsEdit(false);
-            }}
-            style={{ backgroundColor: props.color }}
-            type="text"
-            value={editText || ""}
-            placeholder="create new note here"
-          />
-        ) : (
+        {/*   {true ? ( */}
+        <textarea
+          onChange={(e) => setEditText(e.target.value)}
+          className="card-text edit"
+          ref={textAreaRef}
+          onFocus={(e) =>
+            e.currentTarget.setSelectionRange(
+              e.currentTarget.value.length,
+              e.currentTarget.value.length
+            )
+          }
+          onBlur={() => {
+            setIsEdit(false);
+          }}
+          style={{ backgroundColor: props.color }}
+          type="text"
+          value={editText || ""}
+          placeholder="create new note here"
+        />
+        {/*  ) : (
           <p
             className="card-text label"
             style={{ backgroundColor: props.color }}
           >
             {editText}
           </p>
-        )}
+       )} */}
       </div>
       <div className="card-bottom">
         <div className="card-date">
           <p>{props.date}</p>
         </div>
-        <div>
+        <div className="edit-container">
           <button
             onClick={() => {
               setIsEdit(true);

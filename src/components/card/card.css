@@ -95,3 +95,92 @@
 .edit-button:hover {
   cursor: pointer;
 }
+@media only screen and (max-width: 576px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 270px;
+    height: 50px;
+    border-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .button-cross {
+    border: none;
+    outline: none;
+    width: 1px;
+  }
+  .card-date {
+    display: none;
+    opacity: 0.5;
+    font-size: 8px;
+    padding-right: 6px;
+  }
+  .card-text-container {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    display: grid;
+  }
+  .card-text {
+    font-size: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    border: none;
+    flex-wrap: wrap;
+    font-family: Hind;
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+    grid-column: 1;
+    grid-row: 1   ;
+  }
+  .card-text.edit {
+    resize: none;
+    overflow-y: auto;
+    -webkit-line-clamp: 9;
+    margin: 0;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    height: auto;
+  }
+  .card-text.edit::-webkit-scrollbar {
+    display: none;
+  }
+  .card-text.label {
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    margin: 0;
+    -webkit-box-orient: vertical;
+  }
+  .card-text:focus {
+    border: none;
+    outline: none;
+  }
+  .card-bottom {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .cross-button {
+    border: none;
+    outline: none;
+  }
+  .cross-button:hover {
+    cursor: pointer;
+  }
+  .cross-container {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .cross-img {
+    border-radius: 100px;
+    width: 20px;
+    opacity: 0.5;
+    filter: none;
+  }
+  .cross-img:hover {
+    opacity: 0.8;
+  }
+  .edit-container {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}

@@ -1,10 +1,40 @@
 .search-input {
+  width: 200px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 25px;
+  background-color: white;
+  background-image: url("/public/assets/emoji/searchicon.png");
+  background-position: 10px 15px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  font-family: Hind;
+  transition: width 0.4s ease-in-out;
+  background-repeat: no-repeat;
+}
+.search-input::placeholder {
+  opacity: 0.5;
+}
+.search-input:hover {
+  cursor: pointer;
+}
+.search-input:focus-visible {
+  width: 100%;
+  border: 2px solid #ecebeb;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 2px 0px;
+}
+@media only screen and (max-width: 576px) {
+  .search-input {
     width: 200px;
     box-sizing: border-box;
     border: none;
     outline: none;
     border-radius: 4px;
-    font-size: 25px;
+    font-size: 15px;
     background-color: white;
     background-image: url("/public/assets/emoji/searchicon.png");
     background-position: 10px 15px;
@@ -15,15 +45,8 @@
     transition: width 0.4s ease-in-out;
     background-repeat: no-repeat;
   }
-  .search-input::placeholder {
-    opacity: 0.5;
-  }
-  .search-input:hover {
-    cursor: pointer;
-  }
-  .search-input:focus-visible {
+  .search-wrapper{
+    align-self: flex-start;
     width: 100%;
-    border: 2px solid #ecebeb;
-    border-radius: 8px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 2px 0px;
   }
+}

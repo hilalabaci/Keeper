@@ -3,7 +3,7 @@ import "../search/search.css"
 import Home from "../../pages/home";
 const Search = (props) => {
   return (
-    <div>
+    <div className="search-wrapper">
       <input onChange={props.onSearch} className="search-input" type="search" placeholder="Search.." />
     </div>
   );
