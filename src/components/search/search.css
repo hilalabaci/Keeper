@@ -9,11 +9,13 @@
   background-image: url("/public/assets/emoji/searchicon.png");
   background-position: 10px 15px;
   background-size: 20px 20px;
-  background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
   font-family: Hind;
   transition: width 0.4s ease-in-out;
   background-repeat: no-repeat;
+}
+input[type="search"]::-webkit-search-decoration {
+  display: none;
 }
 .search-input::placeholder {
   opacity: 0.5;
@@ -29,23 +31,10 @@
 }
 @media only screen and (max-width: 576px) {
   .search-input {
-    width: 200px;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    border-radius: 4px;
     font-size: 15px;
-    background-color: white;
-    background-image: url("/public/assets/emoji/searchicon.png");
-    background-position: 10px 15px;
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    font-family: Hind;
-    transition: width 0.4s ease-in-out;
-    background-repeat: no-repeat;
+    background-position: 10px 10px;
   }
-  .search-wrapper{
+  .search-wrapper {
     align-self: flex-start;
     width: 100%;
   }
